@@ -6,9 +6,11 @@
     "defaultRequire": 1
   },
   "mixins": [
-    "EntityMixin",
     "ArmorMixin",
-    "DeerMixin"
+    "DeerMixin",
+    "EntityMixin"
   ],
-  "client": []
+  "client": [
+    "compat.AetherGloveMixin"
+  ]
 }

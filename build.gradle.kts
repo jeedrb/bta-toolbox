@@ -30,6 +30,12 @@ repositories {
     maven("https://maven.thesignalumproject.net/infrastructure") { name = "SignalumMavenInfrastructure" }
     maven("https://maven.thesignalumproject.net/releases") { name = "SignalumMavenReleases" }
 	maven("https://maven.thesignalumproject.net/nightly") { name = "SignalumMavenNightly" }
+
+	maven("https://api.modrinth.com/maven") { name = "Modrinth"
+		content {
+			includeGroup("maven.modrinth")
+		}
+	}
 }
 dependencies {
     minecraft("::${libs.versions.bta.get()}")
@@ -45,6 +51,12 @@ dependencies {
 	compileOnly(libs.joml)
 	compileOnly(libs.joml.primitives)
 	compileOnly(libs.slf4jApi)
+
+	// Better With Aether 1.1.1+8.0.1, Catalyst 3.1.4, UselessNumerical 1.1.1-8.0 optional
+//	compileOnly("maven.modrinth:DuEXy2ir:ivC0qJwg")
+	implementation("maven.modrinth:DuEXy2ir:ivC0qJwg")
+	implementation("maven.modrinth:vT5p53cB:wV516yBr")
+	implementation("maven.modrinth:dVlGo8FN:Z50oV5NW")
 
 	// Only required for development/launch at runtime, won't be part of any builds
 	localRuntime(libs.modMenu) // Optional, can be removed
