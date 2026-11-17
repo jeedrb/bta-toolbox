@@ -8,7 +8,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(MobDeer.class)
-public class DeerMixin {
+public abstract class DeerMixin {
 
 	// deer living/ambient/whatever sound(s)
 	@Inject(method = "getLivingSound", at = @At("HEAD"), cancellable = true)
