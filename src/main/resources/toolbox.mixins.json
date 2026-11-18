@@ -11,6 +11,6 @@
     "EntityMixin"
   ],
   "client": [
-    "compat.AetherGloveMixin"
+    "compat.AetherAccessoriesMixin"
   ]
 }
