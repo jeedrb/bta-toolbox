@@ -17,7 +17,9 @@ public class ToolboxConfig {
 		toolboxOptions = new OptionsPage("toolbox.options.title", Blocks.GLOWSTONE.getDefaultStack())
 			.withComponent(new ToggleableOptionComponent<>(ToolboxOptions.saferSneak))
 			.withComponent(new ToggleableOptionComponent<>(ToolboxOptions.hideArmor))
-			.withComponent(new ToggleableOptionComponent<>(ToolboxOptions.deerSounds));
+			.withComponent(new ToggleableOptionComponent<>(ToolboxOptions.hideAetherAccessories))
+			.withComponent(new ToggleableOptionComponent<>(ToolboxOptions.deerSounds))
+			.withComponent(new ToggleableOptionComponent<>(ToolboxOptions.fixAchievements));
 
 		OptionsPages.register(toolboxOptions);
 		initConfig();
