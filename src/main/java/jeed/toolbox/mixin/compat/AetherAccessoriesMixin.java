@@ -27,7 +27,7 @@ public abstract class AetherAccessoriesMixin {
 
 	@Inject(method = "getAccessory(Lnet/minecraft/core/entity/player/Player;I)Lnet/minecraft/core/item/ItemStack;", at = @At("RETURN"), cancellable = true, require = 0)
 	private void hideAccessories(@NotNull Player player, int logicalSlot, CallbackInfoReturnable<ItemStack> cir) {
-		if (ToolboxOptions.hideArmor.value && ((cir.getReturnValue() != null && cir.getReturnValue().getItem() instanceof ItemGloves) || ToolboxOptions.deerSounds.value)) {
+		if (ToolboxOptions.hideArmor.value && ((cir.getReturnValue() != null && cir.getReturnValue().getItem() instanceof ItemGloves) || ToolboxOptions.hideAetherAccessories.value)) {
 			cir.setReturnValue(null);
 		}
 	}
