@@ -17,7 +17,7 @@ import org.useless.dragonfly.models.entity.StaticEntityModel;
 @Mixin(MobRendererBipedArmored.class)
 public abstract class ArmorMixin<T extends Mob & IArmorWearing<HumanArmorShape>> {
 
-	@Inject(method = "getAndSetupModelForLayer", at = @At("HEAD"), cancellable = true)
+	@Inject(method = "getAndSetupModelForLayer", at = @At("HEAD"), cancellable = true) // mixin at the top
 	private void hideArmor(@NotNull T entity, float brightness, float partialTick, int layer, CallbackInfoReturnable<StaticEntityModel> cir) {
 		if (entity instanceof Player && ToolboxOptions.hideArmor.value) { // if it's a player and setting enabled
 			cir.setReturnValue(null); // just immediately quit the method lol

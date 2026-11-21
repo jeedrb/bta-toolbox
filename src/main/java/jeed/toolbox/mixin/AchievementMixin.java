@@ -16,15 +16,15 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public class AchievementMixin {
 
 	@Shadow
-	private Player thePlayer;
+	private Player thePlayer; // need to grab the same Player object
 
 	@Inject(
 		method = "onTake",
 		at = @At("TAIL")
-	)
+	) // mixin at the end of the method
 	private void fixAchievementIceCream(ItemStack itemStack, CallbackInfo ci) {
 		if (ToolboxOptions.fixAchievements.value) {
-			if (itemStack.getItem() instanceof ItemBucket && ItemBucket.STATE_ICECREAM.equals(ItemBucket.getState(itemStack))) {
+			if (itemStack.getItem() instanceof ItemBucket && ItemBucket.STATE_ICECREAM.equals(ItemBucket.getState(itemStack))) { // straight clone of the working achievement in the 2026-10-28 nightly
 				this.thePlayer.addStat(Achievements.CRAFT_ICECREAM, 1);
 			}
 		}
