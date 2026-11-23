@@ -19,7 +19,8 @@ public class ToolboxConfig {
 			.withComponent(new ToggleableOptionComponent<>(ToolboxOptions.hideArmor))
 			.withComponent(new ToggleableOptionComponent<>(ToolboxOptions.hideAetherAccessories))
 			.withComponent(new ToggleableOptionComponent<>(ToolboxOptions.deerSounds))
-			.withComponent(new ToggleableOptionComponent<>(ToolboxOptions.fixAchievements));
+			.withComponent(new ToggleableOptionComponent<>(ToolboxOptions.fixAchievements))
+			.withComponent(new ToggleableOptionComponent<>(ToolboxOptions.toolBreakSounds));
 
 		OptionsPages.register(toolboxOptions);
 		initConfig();

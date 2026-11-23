@@ -9,7 +9,8 @@
     "ArmorMixin",
     "DeerMixin",
     "EntityMixin",
-    "AchievementMixin"
+    "AchievementMixin",
+    "ToolMixin"
   ],
   "client": [
     "compat.AetherAccessoriesMixin"

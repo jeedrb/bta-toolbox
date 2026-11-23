@@ -6,6 +6,7 @@ options.hideArmor=Hide Armor
 options.deerSounds=Deer Sounds
 options.hideAetherAccessories=Hide Aether Accessories
 options.fixAchievements=Fix Achievements
+options.toolBreakSounds=Tool Break Sounds
 
 subtitles.mob.deer=Deer living
 subtitles.mob.deer.hurt=Deer hurt
