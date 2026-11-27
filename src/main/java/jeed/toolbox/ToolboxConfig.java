@@ -1,5 +1,6 @@
 package jeed.toolbox;
 
+import net.minecraft.client.gui.options.components.BooleanOptionComponent;
 import net.minecraft.client.gui.options.components.ToggleableOptionComponent;
 import net.minecraft.client.gui.options.data.OptionsPage;
 import net.minecraft.client.gui.options.data.OptionsPages;
@@ -15,12 +16,13 @@ public class ToolboxConfig {
 
 	public static void doConfig() {
 		toolboxOptions = new OptionsPage("toolbox.options.title", Blocks.GLOWSTONE.getDefaultStack())
-			.withComponent(new ToggleableOptionComponent<>(ToolboxOptions.saferSneak))
-			.withComponent(new ToggleableOptionComponent<>(ToolboxOptions.hideArmor))
-			.withComponent(new ToggleableOptionComponent<>(ToolboxOptions.hideAetherAccessories))
-			.withComponent(new ToggleableOptionComponent<>(ToolboxOptions.deerSounds))
-			.withComponent(new ToggleableOptionComponent<>(ToolboxOptions.fixAchievements))
-			.withComponent(new ToggleableOptionComponent<>(ToolboxOptions.toolBreakSounds));
+			.withComponent(new BooleanOptionComponent(ToolboxOptions.saferSneak))
+			.withComponent(new BooleanOptionComponent(ToolboxOptions.hideArmor))
+			.withComponent(new BooleanOptionComponent(ToolboxOptions.hideAetherAccessories))
+			.withComponent(new BooleanOptionComponent(ToolboxOptions.deerSounds))
+			.withComponent(new BooleanOptionComponent(ToolboxOptions.fixAchievements))
+//			.withComponent(new BooleanOptionComponent(ToolboxOptions.worldAchievements))
+			.withComponent(new BooleanOptionComponent(ToolboxOptions.toolBreakSounds));
 
 		OptionsPages.register(toolboxOptions);
 		initConfig();
