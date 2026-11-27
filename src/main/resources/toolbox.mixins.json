@@ -11,7 +11,8 @@
     "EntityMixin",
     "AchievementMixin",
     "ToolMixin",
-    "PauseMixin"
+    "PauseMixin",
+    "MinecraftMixin"
   ],
   "client": [
     "compat.AetherAccessoriesMixin"
