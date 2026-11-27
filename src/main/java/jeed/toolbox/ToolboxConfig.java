@@ -21,7 +21,7 @@ public class ToolboxConfig {
 			.withComponent(new BooleanOptionComponent(ToolboxOptions.hideAetherAccessories))
 			.withComponent(new BooleanOptionComponent(ToolboxOptions.deerSounds))
 			.withComponent(new BooleanOptionComponent(ToolboxOptions.fixAchievements))
-//			.withComponent(new BooleanOptionComponent(ToolboxOptions.worldAchievements))
+			.withComponent(new BooleanOptionComponent(ToolboxOptions.worldAchievements))
 			.withComponent(new BooleanOptionComponent(ToolboxOptions.toolBreakSounds));
 
 		OptionsPages.register(toolboxOptions);

@@ -10,7 +10,8 @@
     "DeerMixin",
     "EntityMixin",
     "AchievementMixin",
-    "ToolMixin"
+    "ToolMixin",
+    "PauseMixin"
   ],
   "client": [
     "compat.AetherAccessoriesMixin"

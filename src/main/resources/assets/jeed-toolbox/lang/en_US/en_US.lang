@@ -7,6 +7,7 @@ options.deerSounds=Deer Sound Events
 options.hideAetherAccessories=Hide Aether Accessories
 options.fixAchievements=Fix Achievements
 options.toolBreakSounds=Tool Break Sounds
+options.worldAchievements=Per-World Achievements
 
 subtitles.mob.deer=Deer living
 subtitles.mob.deer.hurt=Deer hurt
