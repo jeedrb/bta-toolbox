@@ -8,5 +8,6 @@ Adds toggles for:
 - Deer Sound Events (no sounds included, sorry!)
 - Fixing Achievements (crafting ice cream)
 - Tool Break Sounds
+- Per-World/Server Achievements
 
 Open to suggestions!!!

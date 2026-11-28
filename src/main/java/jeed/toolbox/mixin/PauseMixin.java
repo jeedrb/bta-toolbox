@@ -21,15 +21,11 @@ import java.nio.file.StandardCopyOption;
 @Mixin(ScreenPause.class)
 public class PauseMixin {
 
+	// making these @Unique will crash when opening the pause screen
 	private Minecraft mc = Minecraft.getMinecraft();
-
 	private World world = mc.currentWorld;
-
 	private LevelStorage storage = world.getLevelStorage();
-
 	private String saveDir = "null", uuid = mc.thePlayer.uuid.toString();
-
-
 
 	@Inject(
 		method = "buttonClicked", // method that does things when you click buttons on the pause screen
@@ -41,7 +37,7 @@ public class PauseMixin {
 			mc.statsCounter.saveStats();
 
 			if (mc.isMultiplayerWorld()) { // multiplayer
-				saveDir = GameSettings.LAST_SERVER.value.replace(":", "_"); // get the last joined IP, replace colon with underscore
+				saveDir = GameSettings.LAST_SERVER.value; // get the last joined IP, value is already sanitized
 			} else { // singleplayer
 				saveDir = storage.getDataFile("").getParentFile().getParentFile().getName();
 			}
